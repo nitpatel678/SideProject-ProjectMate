@@ -6,6 +6,7 @@
     <title>CN</title>
 
     <link rel="stylesheet" href="complete.css" />
+    <link rel="stylesheet" href="com.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Merriweather:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -20,32 +21,33 @@
     />
   </head>
   <body>
-    <div class="nav-bar">
-      <div class="nav-logo">
-        <span>P</span>
-        <span>r</span>
-        <span>o</span>
-        <span>j</span>
-        <span>e</span>
-        <span>c</span>
-        <span>t</span>
-        <span> </span>
-        <span>M</span>
-        <span>a</span>
-        <span>t</span>
-        <span>e</span>
-      </div>
+    <div class="lol">
+      <div class="nav-bar">
+        <div class="nav-logo">
+          <span>P</span>
+          <span>r</span>
+          <span>o</span>
+          <span>j</span>
+          <span>e</span>
+          <span>c</span>
+          <span>t</span>
+          <span> </span>
+          <span>M</span>
+          <span>a</span>
+          <span>t</span>
+          <span>e</span>
+        </div>
 
-      <div class="nav-links">
-        <a href="./complete.html" class="nav-item">Home</a>
-        <a href="#" class="nav-item">Categories</a>
-        <a href="#" class="nav-item">Profile</a>
-        <a href="#" class="nav-item">Contact Us</a>
-      </div>
+        <div class="nav-links">
+          <a href="./complete.html" class="nav-item">Home</a>
+          <a href="#" class="nav-item">Categories</a>
+          <a href="#" class="nav-item">Profile</a>
+          <a href="#" class="nav-item">Contact Us</a>
+        </div>
 
-      <a href="#" class="nav-login">Log In</a>
+        <a href="#" class="nav-login">Log In</a>
+      </div>
     </div>
-
     <div class="navbar-image">
       <img src="3Dvectorhd.png" alt="Navbar Image" class="navbar-img" />
     </div>
@@ -73,9 +75,81 @@
       </p>
     </div>
 
-    <div class="bottom-image">
+    <!-- <div class="bottom-image">
       <img src="Banner_bottom.png" alt="Bottom Image" class="bottom-img" />
-    </div>
+    </div> -->
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <div class="latest-posts">
+          <h2>Latest Project Posts</h2>
+          <div class="post-container">
+            <div class="post">
+              <img src="nitin.png" alt="Post 1" class="post-image" />
+              <div class="post-content">
+                <h3 class="post-title">Post Title 1</h3>
+                <p class="posted-by">Posted by User 1</p>
+                <p class="post-description">
+                  This is a short description of the post...
+                </p>
+                <div class="buttons">
+                  <button class="read-more">Read More</button>
+                  <button class="apply-button">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div class="post">
+              <img src="nitin.png" alt="Post 2" class="post-image" />
+              <div class="post-content">
+                <h3 class="post-title">Post Title 2</h3>
+                <p class="posted-by">Posted by User 2</p>
+                <p class="post-description">
+                  This is a short description of the post...
+                </p>
+                <div class="buttons">
+                  <button class="read-more">Read More</button>
+                  <button class="apply-button">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div class="post">
+              <img src="nitin.png" alt="Post 3" class="post-image" />
+              <div class="post-content">
+                <h3 class="post-title">Post Title 3</h3>
+                <p class="posted-by">Posted by User 3</p>
+                <p class="post-description">
+                  This is a short description of the post...
+                </p>
+                <div class="buttons">
+                  <button class="read-more">Read More</button>
+                  <button class="apply-button">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div class="post">
+              <img src="nitin.png" alt="Post 4" class="post-image" />
+              <div class="post-content">
+                <h3 class="post-title">Post Title 4</h3>
+                <p class="posted-by">Posted by User 4</p>
+                <p class="post-description">
+                  This is a short description of the post...
+                </p>
+                <div class="buttons">
+                  <button class="read-more">Read More</button>
+                  <button class="apply-button">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="see-all-posts">See All Posts</button>
+        </div>
+      </body>
+    </html>
 
     <script>
       const bottomImage = document.getElementById("bottom-image");
@@ -84,9 +158,8 @@
       window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
 
-        // Apply opacity based on scroll position, more sensitive fading
-        const opacity = Math.max(0, 1 - scrollY / 1000); // Adjust the divisor for faster fade
-
+        // Apply opacity based on scroll position
+        const opacity = Math.max(0, 1 - scrollY / 300);
         bottomImage.style.opacity = opacity;
 
         // Completely hide once opacity is zero
