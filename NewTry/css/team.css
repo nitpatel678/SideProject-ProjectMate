@@ -1,0 +1,101 @@
+/* Team Section Styling */
+.team {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background color */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title Section */
+.team .text-center {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team h4 {
+    color: black !important; /* Black color */
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.team p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Team Members Grid */
+.team-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.team-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Darker shadow */
+}
+
+.team-img img {
+    border-bottom: 4px solid #ff5722; /* Orange border under images */
+    width: 100%;
+    height: auto;
+}
+
+.team-icon {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.team-icon a {
+    color: #fff;
+    background-color: #ff5722; /* Orange background for Instagram icon */
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ensures the button behaves like a block element */
+}
+
+/* Remove unnecessary hover effects */
+.team-icon a:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    box-shadow: none; /* No extra effect on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.team-title {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.team-title h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-title p {
+    font-size: 14px;
+    color: black; /* Black color for position titles */
+    font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+    .team .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .team-item {
+        margin-bottom: 30px;
+    }
+}

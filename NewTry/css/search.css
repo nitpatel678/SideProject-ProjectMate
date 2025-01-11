@@ -1,0 +1,44 @@
+/* Hide search bar initially */
+#searchContainer {
+    margin-top: 20px;
+    position: fixed;
+    top: 263px; /* Fixed position from top */
+    right: 345px; /* Fixed position from right */
+    z-index: 9999; /* Ensure it's above other content */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* Start with hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* When search bar is visible */
+#searchContainer.visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0); /* Make sure the element is in its original position */
+}
+
+/* Search box styling */
+#searchContainer input {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100px; /* Make the input box smaller */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the button */
+#searchContainer button {
+    background-color: #ff5722;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#searchContainer button:hover {
+    background-color: #e64a19;
+}

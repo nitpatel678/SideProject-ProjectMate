@@ -1,0 +1,86 @@
+/* FAQ Section Styling */
+.faq-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-primary {
+    color: black !important;
+}
+
+.faq-section h4 {
+    color: black !important; /* Ensure text is black */
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.faq-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff5722; /* Set text color to orange */
+    margin-bottom: 30px;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header .accordion-button {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    padding: 15px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Only change color on hover for the current element */
+.accordion-header .accordion-button:hover {
+    color: #ff5722; /* Orange text */
+    background-color: #ffffff; /* Optional: slight background change on hover */
+}
+
+/* For Active Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: black;
+    color: rgb(0, 0, 0);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+.accordion-collapse {
+    background-color: #fff;
+    transition: height 0.4s ease-out;
+}
+
+.accordion-body {
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.accordion-body.rounded {
+    border-radius: 8px;
+}
+
+/* Image Styling */
+.faq-section img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

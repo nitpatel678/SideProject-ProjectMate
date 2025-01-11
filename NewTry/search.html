@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        .results {
+            margin-top: 20px;
+        }
+        .results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .results li {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Search Results</h3>
+
+    <div class="results">
+        <p id="noResults" style="display: none;">No results found for your search.</p>
+        <ul id="resultsList"></ul>
+    </div>
+
+    <script>
+        // Extract the search query parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+
+        // Show the search query on the page
+        document.title = `Search results for ${query}`;
+        document.querySelector('h3').innerText = `Search Results for: ${query}`;
+
+        // Simulate search results (e.g. you can integrate real data from your backend)
+        const resultsData = [
+            { name: 'Project 1', description: 'Description of Project 1' },
+            { name: 'Project 2', description: 'Description of Project 2' },
+            { name: 'Project 3', description: 'Description of Project 3' }
+        ];
+
+        const resultsList = document.getElementById('resultsList');
+        const noResultsMessage = document.getElementById('noResults');
+
+        // Filter results based on the query
+        const filteredResults = resultsData.filter(project =>
+            project.name.toLowerCase().includes(query.toLowerCase()) ||
+            project.description.toLowerCase().includes(query.toLowerCase())
+        );
+
+        if (filteredResults.length === 0) {
+            noResultsMessage.style.display = 'block';
+        } else {
+            noResultsMessage.style.display = 'none';
+            filteredResults.forEach(project => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${project.name}</strong><br>${project.description}`;
+                resultsList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

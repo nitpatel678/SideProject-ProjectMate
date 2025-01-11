@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CN</title>
 
-    <link rel="stylesheet" href="complete.css" />
-    <link rel="stylesheet" href="com.css" />
+    <link rel="stylesheet" href="./css/complete.css" />
+    <link rel="stylesheet" href="./css/post.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
+    <link rel="stylesheet" href="./css/team.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/upload.css"> 
+    <link rel="stylesheet" href="./css/search.css">  
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Merriweather:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -60,10 +68,49 @@
       </p>
     </div>
 
+    <!-- Button Section -->
     <div class="button-container">
-      <button class="button">Find a Project</button>
-      <button class="button">Upload a Project</button>
-    </div>
+      <button class="button" id="findProjectButton">Find a Project</button>
+      <button class="button" id="uploadButton">Upload a Project</button>
+  </div>
+  
+  <!-- Hidden search bar initially -->
+  <div id="searchContainer" style="display: none;">
+      <input type="text" id="searchKeyword" placeholder="Enter search keyword" />
+      <button onclick="searchProject()">-</button>
+  </div>
+  
+
+<!-- Popup Modal -->
+<!-- The Popup Modal -->
+<div id="popupForm" class="popup">
+  <div class="popup-content">
+    <!-- Close Button -->
+    <span class="popup-close" id="closeBtn">&times;</span>
+    <h2>Upload a Project</h2>
+    <form>
+      <!-- Upload Image Field -->
+      <!-- Title Field -->
+      <label for="title">Project Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter project title" required>
+
+      <!-- Description Field -->
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="Describe your project" required></textarea>
+
+      <!-- Skills Required Field -->
+      <label for="skills">Skills Required</label>
+      <input type="text" id="skills" name="skills" placeholder="Enter skills needed for the project" required>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Project</button>
+    </form>
+  </div>
+</div>
+
+
+
+    
 
     <div class="collab">
       <h2>Collaborate-Create</h2>
@@ -78,103 +125,235 @@
     <!-- <div class="bottom-image">
       <img src="Banner_bottom.png" alt="Bottom Image" class="bottom-img" />
     </div> -->
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
-      <body>
-        <div class="latest-posts">
-          <h2>Latest Project Posts</h2>
-          <div class="post-container">
-            <div class="post">
-              <img src="nitin.png" alt="Post 1" class="post-image" />
-              <div class="post-content">
-                <h3 class="post-title">Post Title 1</h3>
-                <p class="posted-by">Posted by User 1</p>
-                <p class="post-description">
-                  This is a short description of the post...
-                </p>
-                <div class="buttons">
-                  <button class="read-more">Read More</button>
-                  <button class="apply-button">Apply</button>
-                </div>
-              </div>
-            </div>
-            <div class="post">
-              <img src="nitin.png" alt="Post 2" class="post-image" />
-              <div class="post-content">
-                <h3 class="post-title">Post Title 2</h3>
-                <p class="posted-by">Posted by User 2</p>
-                <p class="post-description">
-                  This is a short description of the post...
-                </p>
-                <div class="buttons">
-                  <button class="read-more">Read More</button>
-                  <button class="apply-button">Apply</button>
-                </div>
-              </div>
-            </div>
-            <div class="post">
-              <img src="nitin.png" alt="Post 3" class="post-image" />
-              <div class="post-content">
-                <h3 class="post-title">Post Title 3</h3>
-                <p class="posted-by">Posted by User 3</p>
-                <p class="post-description">
-                  This is a short description of the post...
-                </p>
-                <div class="buttons">
-                  <button class="read-more">Read More</button>
-                  <button class="apply-button">Apply</button>
-                </div>
-              </div>
-            </div>
-            <div class="post">
-              <img src="nitin.png" alt="Post 4" class="post-image" />
-              <div class="post-content">
-                <h3 class="post-title">Post Title 4</h3>
-                <p class="posted-by">Posted by User 4</p>
-                <p class="post-description">
-                  This is a short description of the post...
-                </p>
-                <div class="buttons">
-                  <button class="read-more">Read More</button>
-                  <button class="apply-button">Apply</button>
-                </div>
-              </div>
+    <div class="latest-posts">
+      <h2>Latest Project Posts</h2>
+      <div class="post-container">
+        <div class="post">
+          <img src="newicon3.png" alt="Post 1" class="post-image" />
+          <div class="post-content">
+            <h3 class="post-title">AI-Powered Chatbot for E-Commerce</h3>
+            <p class="posted-by">@Innovator</p>
+            <p class="post-description">
+              Develop a smart chatbot with NLP, payment integration, and a
+              user-friendly dashboard for e-commerce businesses
+            </p>
+            <div class="buttons">
+              <button class="read-more">Read More</button>
+              <button class="apply-button">Apply</button>
             </div>
           </div>
-          <button class="see-all-posts">See All Posts</button>
         </div>
-      </body>
-    </html>
+        <div class="post">
+          <img src="nitin.png" alt="Post 2" class="post-image" />
+          <div class="post-content">
+            <h3 class="post-title">Reimagining UI for Mobile Health Apps</h3>
+            <p class="posted-by">@TechBot</p>
+            <p class="post-description">
+              Redesign health app interfaces with a focus on accessibility,
+              modern aesthetics, and intuitive navigation
+            </p>
+            <div class="buttons">
+              <button class="read-more">Read More</button>
+              <button class="apply-button">Apply</button>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <img src="subretry.png" alt="Post 3" class="post-image" />
+          <div class="post-content">
+            <h3 class="post-title">Blockchain-Based Freelancing Platform</h3>
+            <p class="posted-by">@TechnoTech</p>
+            <p class="post-description">
+              Build a decentralized freelancing platform with smart contracts
+              and transparent payments
+            </p>
+            <div class="buttons">
+              <button class="read-more">Read More</button>
+              <button class="apply-button">Apply</button>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <img src="icon1.png" alt="Post 4" class="post-image" />
+          <div class="post-content">
+            <h3 class="post-title">Reimagining UI for Mobile Health Apps</h3>
+            <p class="posted-by">@tech</p>
+            <p class="post-description">
+              Redesign health app interfaces with a focus on accessibility,
+              modern aesthetics, and intuitive navigation
+            </p>
+            <div class="buttons">
+              <button class="read-more">Read More</button>
+              <button class="apply-button">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="see-all-posts">See All Posts</button>
+    </div>
 
-    <script>
-      const bottomImage = document.getElementById("bottom-image");
+    <!-- FAQs Start -->
+<div class="faq-bootstrap">
+  <div class="container-fluid faq-section bg-light py-5">
+      <div class="container py-5">
+          <div class="row g-5 align-items-center">
+              <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="h-100">
+                      <div class="mb-5">
+                          <h4 class="text-primary">Some Important FAQ's</h4>
+                          <h1 class="display-4 mb-0">Common Frequently Asked Questions</h1>
+                      </div>
+                      <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      Q: How do I find a project partner on this platform?
+                                  </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body rounded">
+                                      A: Simply create a profile, list your skills and interests, and browse through projects or collaborators. 
+                                      Use our smart matchmaking tools to connect with like-minded individuals who share your vision.
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      Q: Is the platform free to use?
+                                  </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      A: Yes, signing up and exploring projects is completely free! 
+                                      We also offer premium features to enhance your collaboration experience.
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingThree">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      Q: What kind of projects can I post or join here?
+                                  </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      A: You can post or join projects from various fields, including technology, design, business, and more.
+                                      Whether it’s a startup idea, a research project, or a personal passion, our platform is open to all types of collaboration.
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                  <img src="mainretry.png" class="img-fluid w-100" alt="FAQ Illustration">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- FAQs End -->
 
-      // Hide bottom image on scroll
-      window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
+<!--Team start-->
 
-        // Apply opacity based on scroll position
-        const opacity = Math.max(0, 1 - scrollY / 300);
-        bottomImage.style.opacity = opacity;
+<div class="container-fluid team pb-5 unique-team-section">
+  <div class="container pb-5">
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+          <h4 class="text-primary">Our Team Members</h4>
+          <p class="mb-0">Meet the passionate minds behind Project Mate! Our team of three brings together diverse skills and a shared vision to make collaboration seamless and impactful.</p>
+      </div>
+      <div class="row g-4 justify-content-center"> <!-- Added justify-content-center -->
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="team-item">
+                  <div class="team-img">
+                      <img src="nitin.png" class="img-fluid rounded-top w-100" alt="">
+                      <div class="team-icon">
+                      </div>
+                  </div>
+                  <div class="team-title p-4">
+                      <h4 class="mb-0">Nancy Bansal</h4>
+                      <p class="mb-0">Design</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="team-item">
+                  <div class="team-img">
+                      <img src="nitin.png" class="img-fluid rounded-top w-100" alt="">
+                      <div class="team-icon">
+                      </div>
+                  </div>
+                  <div class="team-title p-4">
+                      <h4 class="mb-0">Nitin Patel</h4>
+                      <p class="mb-0">Front-End</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+              <div class="team-item">
+                  <div class="team-img">
+                      <img src="nitin.png" class="img-fluid rounded-top w-100" alt="">
+                      <div class="team-icon">                      </div>
+                  </div>
+                  <div class="team-title p-4">
+                      <h4 class="mb-0">Naman Bhola</h4>
+                      <p class="mb-0">Back-end</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
-        // Completely hide once opacity is zero
-        if (opacity === 0) {
-          bottomImage.style.display = "none";
-        } else {
-          bottomImage.style.display = "flex";
-        }
-      });
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+  <div class="container py-5">
+      <div class="row g-5">
+          <!-- Main Description Section -->
+          <div class="col-xl-6 col-md-6">
+              <div class="footer-item">
+                  <a href="complete.html">
+                      <h3> Project Mate</h3>
+                  </a>
+                  <p>
+                      Project Mate is your ultimate platform to connect, collaborate, and innovate. 
+                      We help visionaries and professionals find the perfect partners for their projects, 
+                      empowering ideas to become reality.
+                  </p>
+                  <div class="footer-btn d-flex">
+                      <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-instagram"></i></a>
+                      <a class="btn btn-md-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
 
-      // Ensure image appears only on reload
-      window.addEventListener("load", () => {
-        bottomImage.style.opacity = "1";
-        bottomImage.style.display = "flex";
-      });
-    </script>
+          <!-- Mail Section -->
+          <div class="col-xl-6 col-md-6">
+              <div class="footer-item">
+                  <h4>Mail Us</h4>
+                  <div class="d-flex align-items-center">
+                      </div>
+                      <div>
+                          <p>projectmateinfo@gmail.com</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-bottom text-center py-3">
+          <p>&copy; 2025 Project Mate. All Rights Reserved.</p>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Footer End -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="upload.js"></script>
   </body>
 </html>
